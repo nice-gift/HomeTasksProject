@@ -10,11 +10,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int number1, number2;
         do {
-            Printer.print("Enter the first natural number: ");
+            Printer.print("Enter the first number: ");
             number1 = scanner.nextInt();
         } while (number1 < 1);
         do {
-            Printer.print("Enter the second natural number: ");
+            Printer.print("Enter the second number: ");
             number2 = scanner.nextInt();
         }
         while (number2 < 1);
