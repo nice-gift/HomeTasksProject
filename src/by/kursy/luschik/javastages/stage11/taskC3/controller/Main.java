@@ -11,11 +11,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int count_num_ticket = 0;
         do {
-            Printer.print("Input a count of digits (from 4 to 10) in bus " +
+            Printer.print("Input a count of digits (from 2 to 10) in bus " +
                     "ticket number: ");
             count_num_ticket = scanner.nextInt();
         }
-        while (count_num_ticket < 4 || count_num_ticket > 10);
+        while (count_num_ticket < 2 || count_num_ticket > 10);
         String msg = String.format("Count of happy tickets: %d",
                 Manager.countOfHappyTickets(count_num_ticket));
         Printer.print(msg);
