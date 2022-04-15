@@ -6,18 +6,23 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class ArrayInitializer {
-    public static void rndInit (int [] array, int min, int max){
+    public static void rndInit (double [] array){
+        Scanner scanner= new Scanner(System.in);
         Random random= new Random();
+        Printer.print("Input min value of random: ");
+        double min= scanner.nextDouble();
+        Printer.print("Input max value of random: ");
+        double max= scanner.nextDouble();
         for (int i = 0; i < array.length; i++) {
-            array [i]=random.nextInt((max-min +1)+ min);
+            array [i]=(min+(max-min)*random.nextDouble());
         }
     }
 
-    public static void consoleInit (int[]array){
+    public static void consoleInit (double[]array){
         Scanner scanner= new Scanner(System.in);
-        Printer.print("Input array elements");
+        Printer.print("Input array elements: ");
         for (int i = 0; i < array.length; i++) {
-            array[i]= scanner.nextInt();
+            array[i]= scanner.nextDouble();
         }
     }
 }
