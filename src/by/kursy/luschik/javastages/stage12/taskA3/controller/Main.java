@@ -21,7 +21,7 @@ public class Main {
         ArrayInitializerVarArgs.rndInit(array);
         Printer.print("\nArray: " + Convertor.convert(array));
 
-        Double avg = ExtremeValues.findAverage(array);
+        double avg = ExtremeValues.findAverage(array);
 
         String msg = String.format("\nSum of digits that are less than the " +
                         "average %.2f is %.2f",
