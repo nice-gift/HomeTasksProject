@@ -9,7 +9,7 @@ public class Manager {
         for (int i = 2; i <= number / 2; i++) {
             if (number % i == 0) {
                 int count = 0;
-                for (int j = 2; j < i; j++) {
+                for (int j = 2; j <= i/2; j++) {
                     if (i % j == 0) {
                         count++;
                     }
