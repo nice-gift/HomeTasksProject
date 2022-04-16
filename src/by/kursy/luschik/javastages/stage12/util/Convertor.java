@@ -1,6 +1,5 @@
 package by.kursy.luschik.javastages.stage12.util;
 
-
 public class Convertor {
     public static String convert(double... arrays) {
         StringBuilder builder = new StringBuilder();
