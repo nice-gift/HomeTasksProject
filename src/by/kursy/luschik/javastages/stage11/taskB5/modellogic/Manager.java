@@ -1,7 +1,5 @@
 package by.kursy.luschik.javastages.stage11.taskB5.modellogic;
 
-import javafx.util.Builder;
-
 public class Manager {
     public static String getPrimeDivider(int number) {
         String msg = "";

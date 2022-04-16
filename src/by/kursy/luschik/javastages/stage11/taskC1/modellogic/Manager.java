@@ -14,8 +14,6 @@ public class Manager {
     }
 
     public static int getLeastCommonMultiple(int number1, int number2) {
-        int lcm = number1 * number2 / getGreatestCommonDivisor(number1,
-                number2);
-        return lcm;
+        return number1 * number2 / getGreatestCommonDivisor(number1, number2);
     }
 }
