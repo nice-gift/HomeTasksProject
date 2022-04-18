@@ -9,7 +9,9 @@ public class ArrayInitializerMarks {
         Scanner scanner= new Scanner(System.in);
         Printer.print("Marks: ");
         for (int i = 0; i < arrays.length; i++) {
-            arrays[i]= scanner.nextInt();
+            do {
+                arrays[i]= scanner.nextInt();
+            }while (arrays[i]<0||arrays[i]>5);
         }
     }
 }
