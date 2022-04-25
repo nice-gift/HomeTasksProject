@@ -22,11 +22,11 @@ public class Main {
         ArrayInitInt.rndInit(array);
         Printer.print("Your numbers: " + Arrays.toString(array));
 
-        double avg= CounterAvg.getAvg(array);
+        double avg = CounterAvg.getAvg(array);
 
-//        String msg = String.format("\nCount of not-null numbers: %d",
-//                Counter.countNotNull(array));
-        Printer.print(avg+"");
+        String msg = String.format("\nCount of numbers bigger than average " +
+                "%.2f: %d", avg, Counter.countNumsBiggerAvg(avg, array));
+        Printer.print(msg);
     }
 }
 

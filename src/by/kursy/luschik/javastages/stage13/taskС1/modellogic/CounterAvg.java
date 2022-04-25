@@ -5,7 +5,7 @@ public class CounterAvg {
         double sum = 0;
         for (int t :
                 arrays) {
-            sum += arrays[t];
+            sum += t;
         }
         return sum / arrays.length;
     }
