@@ -6,9 +6,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class ArrayInitInt {
-    public static void consoleInit(int... arrays) {
+    public static void consoleInit(int size, int... arrays) {
         Scanner scanner = new Scanner(System.in);
-        Printer.print("Input any integers: ");
+        String msg = String.format("Input %d integers: ", size);
+        Printer.print(msg);
         for (int i = 0; i < arrays.length; i++) {
             arrays[i] = scanner.nextInt();
         }
