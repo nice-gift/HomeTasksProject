@@ -5,7 +5,7 @@ import by.kursy.luschik.javastages.view.Printer;
 import java.util.Random;
 import java.util.Scanner;
 
-public class ArrayInit {
+public class ArrayInitInt {
     public static void consoleInit(int... arrays) {
         Scanner scanner = new Scanner(System.in);
         Printer.print("Input any integers: ");
