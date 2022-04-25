@@ -1,8 +1,8 @@
-package by.kursy.luschik.javastages.stage13.taskС1.controller;
+package by.kursy.luschik.javastages.stage13.taskC1.controller;
 
 
-import by.kursy.luschik.javastages.stage13.taskС1.modellogic.Counter;
-import by.kursy.luschik.javastages.stage13.taskС1.modellogic.CounterAvg;
+import by.kursy.luschik.javastages.stage13.taskC1.modellogic.Counter;
+import by.kursy.luschik.javastages.stage13.taskC1.modellogic.CounterAvg;
 import by.kursy.luschik.javastages.stage13.util.ArrayInitInt;
 import by.kursy.luschik.javastages.view.Printer;
 

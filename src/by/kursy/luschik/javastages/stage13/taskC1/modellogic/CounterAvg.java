@@ -1,4 +1,4 @@
-package by.kursy.luschik.javastages.stage13.taskС1.modellogic;
+package by.kursy.luschik.javastages.stage13.taskC1.modellogic;
 
 public class CounterAvg {
     public static double getAvg(int... arrays) {
