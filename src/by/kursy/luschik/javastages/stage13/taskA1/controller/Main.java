@@ -15,9 +15,10 @@ public class Main {
             size = scanner.nextInt();
         } while (size < 1);
         int[] array = new int[size];
-        ArrayInit.consoleInit(array);
-        Arrays.toString(array);
-        System.out.print(array);
-//        Printer.print(array);
+//        ArrayInit.consoleInit(array);
+        ArrayInit.rndInit(array);
+
+        Printer.print(Arrays.toString(array));
+
     }
 }
