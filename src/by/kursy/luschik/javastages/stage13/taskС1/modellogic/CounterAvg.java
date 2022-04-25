@@ -1,0 +1,12 @@
+package by.kursy.luschik.javastages.stage13.taskС1.modellogic;
+
+public class CounterAvg {
+    public static double getAvg(int... arrays) {
+        double sum = 0;
+        for (int t :
+                arrays) {
+            sum += arrays[t];
+        }
+        return sum / arrays.length;
+    }
+}
