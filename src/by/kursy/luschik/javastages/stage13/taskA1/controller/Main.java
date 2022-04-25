@@ -1,5 +1,6 @@
 package by.kursy.luschik.javastages.stage13.taskA1.controller;
 
+import by.kursy.luschik.javastages.stage13.taskA1.modellogic.Counter;
 import by.kursy.luschik.javastages.stage13.util.ArrayInit;
 import by.kursy.luschik.javastages.view.Printer;
 
@@ -15,10 +16,12 @@ public class Main {
             size = scanner.nextInt();
         } while (size < 1);
         int[] array = new int[size];
-//        ArrayInit.consoleInit(array);
+//      ArrayInit.consoleInit(array);
         ArrayInit.rndInit(array);
+        Printer.print("Your numbers: " + Arrays.toString(array));
 
-        Printer.print(Arrays.toString(array));
-
+        String msg = String.format("\nCount of not-null numbers: %d",
+                Counter.countNotNull(array));
+        Printer.print(msg);
     }
 }
