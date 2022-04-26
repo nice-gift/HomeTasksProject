@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class ArrayInitDouble {
     public static void consoleInit(double... arrays) {
         Scanner scanner = new Scanner(System.in);
-        String msg = String.format("Input %d integers: ", arrays.length);
+        String msg = String.format("Input %d numbers: ", arrays.length);
         Printer.print(msg);
         for (int i = 0; i < arrays.length; i++) {
             arrays[i] = scanner.nextDouble();
