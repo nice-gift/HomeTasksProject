@@ -14,7 +14,7 @@ public class Bound {
 
     public static int getIndexLast0(double... numbers) {
         int indexLast0 = 0;
-        for (int i = numbers.length; i > 0; i--) {
+        for (int i = numbers.length-1; i >= 0; i--) {
             if (numbers[i] == 0) {
                 indexLast0 = i;
                 break;
