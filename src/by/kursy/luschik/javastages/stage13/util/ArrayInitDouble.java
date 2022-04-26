@@ -23,7 +23,7 @@ public class ArrayInitDouble {
         Printer.print("Enter max value of random: ");
         double max = scanner.nextDouble();
         for (int i = 0; i < arrays.length; i++) {
-            arrays[i] = min + (max - min) * random.nextDouble();
+            arrays[i] = (max - min + 1) * random.nextDouble() + min;
         }
     }
 }
