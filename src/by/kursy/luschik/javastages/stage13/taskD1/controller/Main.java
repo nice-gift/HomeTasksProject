@@ -16,7 +16,7 @@ public class Main {
             size = scanner.nextInt();
         } while (size < 1);
         int[] array = new int[size];
-        ArrayInitInt.consoleInit(size, array);
+        ArrayInitInt.consoleInit(array);
         Printer.print("Your numbers: " + Arrays.toString(array));
 
         String msg = Verify.verifyAllNumsAreDif(array) ? "All numbers " +

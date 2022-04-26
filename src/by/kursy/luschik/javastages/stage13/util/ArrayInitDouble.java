@@ -6,9 +6,9 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class ArrayInitDouble {
-    public static void consoleInit(int size, double... arrays) {
+    public static void consoleInit(double... arrays) {
         Scanner scanner = new Scanner(System.in);
-        String msg = String.format("Input %d integers: ", size);
+        String msg = String.format("Input %d integers: ", arrays.length);
         Printer.print(msg);
         for (int i = 0; i < arrays.length; i++) {
             arrays[i] = scanner.nextDouble();
