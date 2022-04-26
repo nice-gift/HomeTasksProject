@@ -20,9 +20,10 @@ public class Main {
         Printer.print("Your numbers: " + Convertor.convert(array));
         int indexMin = Manager.getMIn(array);
         int indexMax = Manager.getMax(array);
-        String msg = String.format("Min element has index %d, max - %d. " +
-                "Product of elements located between the minimum and maximum" +
-                " - %.2f", indexMin, indexMax, Manager.productNums(indexMin,
+        String msg = String.format("Min element has index %d (%dth in a row)" +
+                ", max - %d (%dth in a row). Product of elements located " +
+                "between the minimum and maximum - %.2f", indexMin, indexMin
+                + 1, indexMax, indexMax + 1, Manager.productNums(indexMin,
                 indexMax, array));
         Printer.print("\n" + msg);
     }
