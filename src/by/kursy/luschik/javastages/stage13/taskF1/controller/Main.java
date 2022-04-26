@@ -19,11 +19,14 @@ public class Main {
         } while (size < 1);
         double[] array = new double[size];
         ArrayInitDouble.consoleInit(array);
-//        ArrayInitDouble.rndInitDouble(array);
         Printer.print("Your numbers: " + Convertor.convert(array));
         int indexFirst0 = Bound.getIndexFirst0(array);
-
-        ArraySorter.insertedSort(indexFirst0, array);
-        Printer.print("\nNumbers after sorting: " + Arrays.toString(array));
+        ArraySorter.insertedSortDsc(indexFirst0, array);
+        Printer.print("\nNumbers after sorting until the first element, " +
+                "equals 0:\n" + Convertor.convert(array));
+        int indexLast0 = Bound.getIndexLast0(array);
+        ArraySorter.insertedSortDsc(indexLast0, array);
+        Printer.print("\nNumbers after sorting until the last element, " +
+                "equals 0:\n" + Convertor.convert(array));
     }
 }
