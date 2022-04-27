@@ -1,4 +1,4 @@
-package by.kursy.luschik.javastages.stage13.taskF1.modellogic;
+package by.kursy.luschik.javastages.stage13.util;
 
 public class ArraySorter {
     public static void insertedSortDsc(int indexFirst0, double[] array) {
