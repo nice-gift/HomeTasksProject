@@ -1,8 +1,8 @@
 package by.kursy.luschik.javastages.stage13.taskF1.controller;
 
-import by.kursy.luschik.javastages.stage13.taskF1.modellogic.ArraySorter;
 import by.kursy.luschik.javastages.stage13.taskF1.modellogic.Bound;
 import by.kursy.luschik.javastages.stage13.util.ArrayInitDouble;
+import by.kursy.luschik.javastages.stage13.util.ArraySorter;
 import by.kursy.luschik.javastages.stage13.util.Convertor;
 import by.kursy.luschik.javastages.stage13.util.UserInput;
 import by.kursy.luschik.javastages.view.Printer;
