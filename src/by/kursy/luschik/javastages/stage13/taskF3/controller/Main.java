@@ -16,12 +16,12 @@ public class Main {
 
         int indexFirstNegative = Bound.indexFirstNegative(array);
         ArraySorter.selectedSortDsc(indexFirstNegative, array);
-        Printer.print("\nNumbers after sorting until the first negative " +
-                "element: " + Convertor.convert(array));
+        Printer.print("\nNumbers after sorting by descending until the first" +
+                " negative element: " + Convertor.convert(array));
 
         int indexLastNegative = Bound.indexLastNegative(array);
         ArraySorter.selectedSortDsc(indexLastNegative, array);
-        Printer.print("\nNumbers after sorting until the last negative " +
-                "element: " + Convertor.convert(array));
+        Printer.print("\nNumbers after sorting by descending until the last " +
+                "negative element: " + Convertor.convert(array));
     }
 }
