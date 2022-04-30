@@ -1,6 +1,6 @@
 package by.kursy.luschik.javastages.stage13.taskE11.modellogic;
 
-public class Manger {
+public class Manager {
     public static int getMax(double... numbers) {
         int indexMax = 0;
 
