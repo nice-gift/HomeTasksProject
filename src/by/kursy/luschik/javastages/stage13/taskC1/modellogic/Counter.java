@@ -8,7 +8,6 @@ public class Counter {
             if (t > avg) {
                 count++;
             }
-
         }
 
         return count;
