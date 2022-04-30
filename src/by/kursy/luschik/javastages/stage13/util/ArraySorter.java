@@ -46,6 +46,7 @@ public class ArraySorter {
     public static void selectedSortAsc(int indexBound, int... numbers) {
         for (int i = 0; i < indexBound - 1; i++) {
             boolean flag = true;
+            int indexMin = i;
 
             for (int j = 0; j < indexBound - 1; j++) {
                 if (numbers[j] > numbers[j + 1]) {
@@ -58,8 +59,6 @@ public class ArraySorter {
                 break;
             }
 
-            int indexMin = i;
-
             for (int j = i + 1; j < indexBound; j++) {
                 if (numbers[indexMin] > numbers[j]) {
                     indexMin = j;
@@ -67,8 +66,8 @@ public class ArraySorter {
             }
 
             int t = numbers[indexMin];
-            numbers[i] = numbers[indexMin];
-            numbers[indexMin] = t;
+            numbers[indexMin]=numbers[i];
+            numbers[i] = t;
         }
     }
 }
