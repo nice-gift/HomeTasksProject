@@ -3,11 +3,9 @@ package by.kursy.luschik.javastages.stage13.taskE1.modellogic;
 public class Manager {
     public static int getMax(double... numbers) {
         int indexMax = 0;
-        double max = numbers[indexMax];
 
         for (int i = 1; i < numbers.length; i++) {
-            if (numbers[i] > max) {
-                max = numbers[i];
+            if (numbers[indexMax] < numbers[i]) {
                 indexMax = i;
             }
         }
@@ -17,11 +15,9 @@ public class Manager {
 
     public static int getMIn(double... numbers) {
         int indexMin = 0;
-        double min = numbers[indexMin];
 
         for (int i = 1; i < numbers.length; i++) {
-            if (numbers[i] < min) {
-                min = numbers[i];
+            if (numbers[indexMin] > numbers[i]) {
                 indexMin = i;
             }
         }
