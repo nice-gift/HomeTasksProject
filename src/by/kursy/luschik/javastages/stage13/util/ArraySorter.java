@@ -16,7 +16,7 @@ public class ArraySorter {
     }
 
     public static void selectedSortDsc(int indexBound, double[] array) {
-        for (int i = 0; i < indexBound - 1; i++) {
+        for (int i = 0; i < indexBound; i++) {
             int indexMax = i;
             boolean flag = true;
 
@@ -44,7 +44,7 @@ public class ArraySorter {
     }
 
     public static void selectedSortAsc(int indexBound, int... numbers) {
-        for (int i = 0; i < indexBound - 1; i++) {
+        for (int i = 0; i < indexBound; i++) {
             boolean flag = true;
             int indexMin = i;
 
