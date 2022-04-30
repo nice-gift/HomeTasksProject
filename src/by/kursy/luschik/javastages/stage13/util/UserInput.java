@@ -12,6 +12,7 @@ public class UserInput {
             Printer.print(msg);
             size = scanner.nextInt();
         } while (size < 1);
+
         return size;
     }
 }
