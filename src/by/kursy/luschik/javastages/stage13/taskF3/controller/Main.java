@@ -14,12 +14,12 @@ public class Main {
         ArrayInitDouble.rndInitDouble(array);
         Printer.print("Your numbers: " + Convertor.convert(array));
 
-        int indexFirstNegative = Bound.indexFirstNegative(array);
+        int indexFirstNegative = Bound.getIndexFirstNegative(array);
         ArraySorter.selectedSortDsc(indexFirstNegative, array);
         Printer.print("\nNumbers after sorting by descending until the first" +
                 " negative element: " + Convertor.convert(array));
 
-        int indexLastNegative = Bound.indexLastNegative(array);
+        int indexLastNegative = Bound.getIndexLastNegative(array);
         ArraySorter.selectedSortDsc(indexLastNegative, array);
         Printer.print("\nNumbers after sorting by descending until the last " +
                 "negative element: " + Convertor.convert(array));
