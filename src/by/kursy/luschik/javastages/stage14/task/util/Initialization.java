@@ -13,7 +13,7 @@ public class Initialization {
         do {
             Printer.print(msg);
             coordinate = scanner.nextInt();
-        } while (coordinate < 0 || coordinate>8);
+        } while (coordinate < 1 || coordinate > 8);
 
         return coordinate;
     }
