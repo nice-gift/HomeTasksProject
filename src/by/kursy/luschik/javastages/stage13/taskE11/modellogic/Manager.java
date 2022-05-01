@@ -13,4 +13,14 @@ public class Manager {
         return indexMax;
 
     }
+
+    public static double getSum(int indexMax, double... numbers) {
+        double sum = 0;
+
+        for (int i = indexMax + 1; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+
+        return sum;
+    }
 }

@@ -18,5 +18,9 @@ public class Main {
         Printer.print("Your numbers are: " + Arrays.toString(array));
 
         int indexMax = Manager.getMax(array);
+        double sum = Manager.getSum(indexMax, array);
+        String msg = String.format("\nThe sum of the elements after " +
+                "the maximum %.1f: %.1f", array[indexMax], sum);
+        Printer.print(msg);
     }
 }
