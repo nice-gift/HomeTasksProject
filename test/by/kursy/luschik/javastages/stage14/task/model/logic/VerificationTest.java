@@ -108,7 +108,6 @@ public class VerificationTest {
         Verification.moveKing(x1, y1, x2, y2);
     }
 
-
     @Test
     public void testMoveQueenNegativeScenery() {
         int[] x1 = {5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5};
@@ -159,4 +158,56 @@ public class VerificationTest {
 
         Verification.moveQueen(x1, y1, x2, y2);
     }
+
+    @Test
+    public void testMoveHorseNegativeScenery() {
+        int[] x1 = {5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5};
+        int[] y1 = {3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3};
+        int[] x2 = {3, 3, 3, 4, 4, 4, 5, 5, 6, 7, 7, 7, 8};
+        int[] y2 = {1, 3, 5, 2, 3, 4, 2, 4, 3, 1, 3, 5, 4};
+        String expected = "NO";
+
+        for (int i = 0; i < x1.length; i++) {
+            String actual = Verification.moveHorse(x1[i], y1[i], x2[i], y2[i]);
+            assertEquals(expected, actual);
+        }
+    }
+
+    @Test
+    public void testMoveHorsePositiveScenery() {
+        int[] x1 = {5, 5, 5, 5, 5, 5, 5, 5};
+        int[] y1 = {3, 3, 3, 3, 3, 3, 3, 3};
+        int[] x2 = {3, 3, 4, 4, 6, 6, 7, 7};
+        int[] y2 = {2, 4, 1, 5, 1, 5, 2, 4};
+        String expected = "YES";
+
+        for (int i = 0; i < x1.length; i++) {
+            String actual = Verification.moveHorse(x1[i], y1[i], x2[i], y2[i]);
+            assertEquals(expected, actual);
+        }
+    }
+
+    @Test
+    public void testMoveHorseCoordinateNoChange() {
+        int x1 = 5;
+        int y1 = 3;
+        int x2 = 5;
+        int y2 = 3;
+        String expected = "NO";
+
+        String actual = Verification.moveHorse(x1, y1, x2, y2);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test(timeout = 1)
+    public void testMoveHorseByTimeout() {
+        int x1 = 5;
+        int y1 = 3;
+        int x2 = 5;
+        int y2 = 1;
+
+        Verification.moveHorse(x1, y1, x2, y2);
+    }
+
 }
