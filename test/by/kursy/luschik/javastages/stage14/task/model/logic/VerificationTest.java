@@ -98,16 +98,6 @@ public class VerificationTest {
         assertEquals(expected, actual);
     }
 
-    @Test(timeout = 1)
-    public void testMoveKingByTimeout() {
-        int x1 = 5;
-        int y1 = 3;
-        int x2 = 5;
-        int y2 = 1;
-
-        Verification.moveKing(x1, y1, x2, y2);
-    }
-
     @Test
     public void testMoveQueenNegativeScenery() {
         int[] x1 = {5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5};
@@ -147,16 +137,6 @@ public class VerificationTest {
         String actual = Verification.moveQueen(x1, y1, x2, y2);
 
         assertEquals(expected, actual);
-    }
-
-    @Test(timeout = 1)
-    public void testMoveQueenByTimeout() {
-        int x1 = 5;
-        int y1 = 3;
-        int x2 = 5;
-        int y2 = 1;
-
-        Verification.moveQueen(x1, y1, x2, y2);
     }
 
     @Test
@@ -200,14 +180,44 @@ public class VerificationTest {
         assertEquals(expected, actual);
     }
 
-    @Test(timeout = 1)
-    public void testMoveHorseByTimeout() {
-        int x1 = 5;
-        int y1 = 3;
-        int x2 = 5;
-        int y2 = 1;
+    @Test
+    public void testMoveElephantNegativeScenery() {
+        int[] x1 = {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2};
+        int[] y1 = {4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4};
+        int[] x2 = {1, 1, 1, 2, 2, 3, 4, 5, 6, 8, 8, 8};
+        int[] y2 = {1, 4, 8, 3, 5, 4, 3, 5, 3, 1, 4, 8};
+        String expected = "NO";
 
-        Verification.moveHorse(x1, y1, x2, y2);
+        for (int i = 0; i < x1.length; i++) {
+            String actual = Verification.moveElephant(x1[i], y1[i], x2[i], y2[i]);
+            assertEquals(expected, actual);
+        }
     }
 
+    @Test
+    public void testMoveElephantPositiveScenery() {
+        int[] x1 = {2, 2, 2, 2, 2, 2, 2, 2, 2};
+        int[] y1 = {4, 4, 4, 4, 4, 4, 4, 4, 4};
+        int[] x2 = {1, 1, 3, 3, 4, 4, 5, 5, 6};
+        int[] y2 = {3, 5, 3, 5, 2, 6, 1, 7, 8};
+        String expected = "YES";
+
+        for (int i = 0; i < x1.length; i++) {
+            String actual = Verification.moveElephant(x1[i], y1[i], x2[i], y2[i]);
+            assertEquals(expected, actual);
+        }
+    }
+
+    @Test
+    public void testMoveElephantCoordinateNoChange() {
+        int x1 = 2;
+        int y1 = 4;
+        int x2 = 2;
+        int y2 = 4;
+        String expected = "NO";
+
+        String actual = Verification.moveElephant(x1, y1, x2, y2);
+
+        assertEquals(expected, actual);
+    }
 }
