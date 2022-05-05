@@ -2,7 +2,6 @@ package by.kursy.luschik.javastages.stage14.taskwitharray.model.logic;
 
 import static org.junit.Assert.*;
 
-import by.kursy.luschik.javastages.stage14.task.model.logic.Verification;
 import org.junit.Test;
 
 public class VerificationNewTest {
@@ -18,7 +17,7 @@ public class VerificationNewTest {
                 {3, 4, 1, 2},
                 {3, 4, 1, 6},
                 {3, 4, 6, 1},
-                {3, 4, 7, 8},
+                {3, 4, 7, 8}
         };
 
         String expected = "NO";
@@ -38,7 +37,7 @@ public class VerificationNewTest {
                 {3, 4, 3, 3},
                 {3, 4, 3, 5},
                 {3, 4, 3, 1},
-                {3, 4, 3, 8},
+                {3, 4, 3, 8}
         };
 
         String expected = "YES";
@@ -46,6 +45,29 @@ public class VerificationNewTest {
         for (int i = 0; i < array.length; i++) {
             assertEquals(expected, VerificationNew.canRook(array[i]));
         }
+    }
+
+    @Test
+    public void testCanRookCoordinateNoChange() {
+        int[] array = {3, 4, 4, 3};
+
+        String expected = "NO";
+
+        assertEquals(expected, VerificationNew.canRook(array));
+    }
+
+    @Test (expected = ArrayIndexOutOfBoundsException.class)
+    public void testCanRookEmpty() {
+        int[] array = {};
+
+        VerificationNew.canRook(array);
+    }
+
+    @Test (expected = NullPointerException.class)
+    public void testCanRookNull() {
+        int[] array = null;
+
+        VerificationNew.canRook(null);
     }
 
 }
