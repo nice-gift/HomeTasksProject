@@ -2,6 +2,7 @@ package by.kursy.luschik.javastages.stage14.taskwitharray.model.logic;
 
 import static org.junit.Assert.*;
 
+import by.kursy.luschik.javastages.stage14.task.model.logic.Verification;
 import org.junit.Test;
 
 public class VerificationNewTest {
@@ -19,7 +20,28 @@ public class VerificationNewTest {
                 {3, 4, 6, 1},
                 {3, 4, 7, 8},
         };
+
         String expected = "NO";
+
+        for (int i = 0; i < array.length; i++) {
+            assertEquals(expected, VerificationNew.canRook(array[i]));
+        }
+    }
+
+    @Test
+    public void testCanRookPositiveScenery() {
+        int[][] array = {
+                {3, 4, 4, 4},
+                {3, 4, 2, 4},
+                {3, 4, 1, 4},
+                {3, 4, 8, 4},
+                {3, 4, 3, 3},
+                {3, 4, 3, 5},
+                {3, 4, 3, 1},
+                {3, 4, 3, 8},
+        };
+
+        String expected = "YES";
 
         for (int i = 0; i < array.length; i++) {
             assertEquals(expected, VerificationNew.canRook(array[i]));
